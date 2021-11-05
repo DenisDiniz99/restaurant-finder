@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { shallowEqual, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 
 import {
     RestaurantCard,
-    Model,
+    Modal,
     Map,
     ImageCard,
     Loader,
@@ -24,7 +24,7 @@ import {
     Carousel,
     Wrapper
 } from './styles';
-import Modal from "../../components/Modal";
+
 
 const Home = () => {
     const [value, setValue] = useState('');
@@ -50,8 +50,8 @@ const Home = () => {
                 <>
                     <Title size="large">Na sua área</Title>
                     <Carousel {...settings }>
-                        {restaurants.map((restaurants) => (
-                            <ImageCard key={restaurants.placeId} restaurant={restaurant}/>
+                        {restaurants.map((restaurant) => (
+                            <ImageCard key={restaurant.placeId} restaurant={restaurant}/>
                         ))}
                     </Carousel>
                 </>
@@ -105,11 +105,11 @@ const Home = () => {
                 <Modal open={open} onClose={() => setOpen(false)}>
                     {restaurantsSelected ? (
                         <>
-                            <Text size="large">{restaurantSelected?.name}</Text>
-                            <Text size="medium">{restaurantSelected?.formatted_phone_number}</Text>
-                            <Text size="medium">{restaurantSelected?.formatted_address}</Text>
+                            <Text size="large">{restaurantsSelected?.name}</Text>
+                            <Text size="medium">{restaurantsSelected?.formatted_phone_number}</Text>
+                            <Text size="medium">{restaurantsSelected?.formatted_address}</Text>
                             <Text size="medium">
-                                {restaurantSelected?.opening_hours?.open_now
+                                {restaurantsSelected?.opening_hours?.open_now
                                     ? 'Aberto agora :)'
                                     : 'Fechado neste momento :('}
                             </Text>

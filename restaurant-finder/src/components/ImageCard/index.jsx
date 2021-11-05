@@ -39,5 +39,5 @@ export default ({ restaurant }) => {
                 <ImageSkeleton width="90px" heigth="90px"/>
             )}
         </>
-    )
-}
+    );
+};

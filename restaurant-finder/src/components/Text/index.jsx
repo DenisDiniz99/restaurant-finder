@@ -1,5 +1,5 @@
 import React from "react";
-import Base from "./Base"
+import BaseText from "./Base"
 
 const Text = ({ children, size, textStyle, ...others }) => (
     <BaseText size={size} textStyle={textStyle} {...others}>
