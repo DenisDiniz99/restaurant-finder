@@ -22,13 +22,13 @@ export const Logo = styled.img`
     margin: 15px;
 `;
 
-export const Title = styled(Text)`
+export const CarouselTitle = styled(Text)`
     margin: 16px 0;
 `;
 
 export const Carousel = styled(Slider)`
     .slick-slide {
-        margin-rigth: 16px;
+        margin-rigth: 40px;
     }
 `;
 

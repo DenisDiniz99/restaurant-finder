@@ -4,26 +4,11 @@ import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 
-import {
-    RestaurantCard,
-    Modal,
-    Map,
-    ImageCard,
-    Loader,
-    Text,
-    ImageSkeleton as Skeleton,
-} from '../../components';
+import { RestaurantCard, Modal, Map, ImageCard, Loader, Text, ImageSkeleton as Skeleton, } from '../../components';
 
 import logo from '../../assets/logo.svg';
 
-import {
-    Container,
-    Search,
-    Logo,
-    Title,
-    Carousel,
-    Wrapper
-} from './styles';
+import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper } from './styles';
 
 
 const Home = () => {
@@ -48,10 +33,10 @@ const Home = () => {
         if(hasRestaurants){
             return(
                 <>
-                    <Title size="large">Na sua área</Title>
+                    <CarouselTitle size="large">Próximos à você :)</CarouselTitle>
                     <Carousel {...settings }>
                         {restaurants.map((restaurant) => (
-                            <ImageCard key={restaurant.placeId} restaurant={restaurant}/>
+                            <ImageCard key={restaurant.place_id} restaurant={restaurant}/>
                         ))}
                     </Carousel>
                 </>
@@ -64,10 +49,10 @@ const Home = () => {
         if(hasRestaurants){
             return restaurants.map((restaurant) => (
                 <RestaurantCard
-                    key={restaurant.placeId}
+                    key={restaurant.place_id}
                     restaurant={restaurant}
                     onClick={() => {
-                        setPlaceId(restaurant.placeId);
+                        setPlaceId(restaurant.palce_id);
                         setOpen(true);
                     }}
                 />
@@ -98,7 +83,6 @@ const Home = () => {
                     >
                         <Input type="text" value={value} onKeyPress={handleKeyPress} onChange={handleChange}/>
                     </TextField>
-
                     {renderCarousel()}
                 </Search>
                 {renderRestaurants()}
