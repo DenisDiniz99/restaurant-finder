@@ -21,9 +21,9 @@ export const RestaurantInfo = styled.div`
 `;
 
 export const RestaurantPhoto = styled.img`
-  border-radius: 6px;
-  width: 100px;
-  height: 100px;
+  border-radius: 4px;
+  width: 90px;
+  max-height: 90px;
   object-fit: cover;
   display: ${({ imageLoaded }) => (imageLoaded ? 'block' : 'none')};
 `;

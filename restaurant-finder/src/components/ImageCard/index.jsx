@@ -7,7 +7,7 @@ import ImageSkeleton from "../ImageSkeleton";
 export const Card = styled.div`
     width: 90px;
     height: 90px;
-    border-radius: 6px;
+    border-radius: 4px;
     background-image: url(${(props) => props.photo });
     background-size: cover;
     p {

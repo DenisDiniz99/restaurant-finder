@@ -9,7 +9,7 @@ import { RestaurantCard, Modal, Map, ImageCard, Loader, Text, ImageSkeleton as S
 import logo from '../../assets/logo.svg';
 import restauranteFake from '../../assets/restaurante-fake.png';
 
-import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper } from './styles';
+import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper, CarouselLine } from './styles';
 
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
         dots: false,
         infinite: true,
         autoplay: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         adaptiveHeigth: true

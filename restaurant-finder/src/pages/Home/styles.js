@@ -6,7 +6,7 @@ import { Text } from "../../components";
 export const Container = styled.aside`
     background-color: ${({ theme: { colors } }) => colors.background};
     width: 360px;
-    heigth: 100vh;
+    height: 100vh;
     overflow-y: scroll;
 `;
 
@@ -31,6 +31,7 @@ export const CarouselTitle = styled(Text)`
     margin: 16px 0;
 `;
 
+
 export const Carousel = styled(Slider)`
     .slick-slide {
         margin-right: 16px;
@@ -39,5 +40,4 @@ export const Carousel = styled(Slider)`
 
 export const Wrapper = styled.div`
     display: flex;
-    flex-direction: row;
 `;
