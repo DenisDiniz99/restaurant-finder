@@ -19,19 +19,25 @@ export const Search = styled.section`
 `;
 
 export const Logo = styled.img`
-    margin: 15px;
+    margin: 20px;
 `;
 
 export const CarouselTitle = styled(Text)`
+    font-family: ${(props) => props.theme.fonts.regular };
+    color: ${(props) => props.theme.colors.text };
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
     margin: 16px 0;
 `;
 
 export const Carousel = styled(Slider)`
     .slick-slide {
-        margin-rigth: 40px;
+        margin-right: 16px;
     }
 `;
 
 export const Wrapper = styled.div`
     display: flex;
+    flex-direction: row;
 `;

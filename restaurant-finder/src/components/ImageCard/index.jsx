@@ -5,9 +5,9 @@ import Text from "../Text";
 import ImageSkeleton from "../ImageSkeleton";
 
 export const Card = styled.div`
-    min-width: 90px;
-    heigth: 90px;
-    border-radius: 8px;
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
     background-image: url(${(props) => props.photo });
     background-size: cover;
     p {

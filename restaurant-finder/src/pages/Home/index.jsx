@@ -7,6 +7,7 @@ import MaterialIcon from '@material/react-material-icon';
 import { RestaurantCard, Modal, Map, ImageCard, Loader, Text, ImageSkeleton as Skeleton, } from '../../components';
 
 import logo from '../../assets/logo.svg';
+import restauranteFake from '../../assets/restaurante-fake.png';
 
 import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper } from './styles';
 
