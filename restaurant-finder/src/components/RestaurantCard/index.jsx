@@ -4,6 +4,7 @@ import ReactStars from "react-rating-stars-component";
 import {Restaurant, RestaurantInfo, Content, RestaurantPhoto} from './styles';
 import Text from '../Text';
 import ImageSkeleton from '../ImageSkeleton';
+import restauranteFake from '../../assets/restaurante-fake.png'
 
 const RestaurantCard = ({ restaurant, onClick }) => {
     const [ImageLoaded, setImageLoaded] = useState(false);
@@ -18,10 +19,10 @@ const RestaurantCard = ({ restaurant, onClick }) => {
             <RestaurantPhoto
                 ImageLoaded={ImageLoaded}
                 onload={ () => setImageLoaded(true) }
-                src={restaurant.photos ? restaurant.photos[0].getUrl() : restaurant.icon }
-                alt="foto do restaurante"
+                src={restaurant.photos ? restaurant.photos[0].getUrl() : restauranteFake }
+                alt="Foto do Restaurante"
             />
-            {!ImageLoaded && <ImageSkeleton width="100px" heigth="100px"/>}
+            {!ImageLoaded && <ImageSkeleton width="100px" height="100px"/>}
         </Restaurant>
     );
 };

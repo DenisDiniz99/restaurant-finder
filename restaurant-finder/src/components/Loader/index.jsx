@@ -8,7 +8,7 @@ export default ()=> {
         loop: true,
         autoplay: true,
         animation,
-        renderSettings: {
+        rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice',
         }
     };

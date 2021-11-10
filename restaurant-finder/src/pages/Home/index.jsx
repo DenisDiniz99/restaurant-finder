@@ -6,16 +6,16 @@ import MaterialIcon from '@material/react-material-icon';
 
 import { RestaurantCard, Modal, Map, ImageCard, Loader, Text, ImageSkeleton as Skeleton, } from '../../components';
 
-import logo from '../../assets/logo.svg';
-import restauranteFake from '../../assets/restaurante-fake.png';
+import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper } from './styles';
 
-import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper, CarouselLine } from './styles';
+import logo from '../../assets/logo.svg';
 
 
 const Home = () => {
     const [value, setValue] = useState('');
     const [query, setQuery] = useState('');
     const [placeId, setPlaceId] = useState(null);
+    
     const [open, setOpen] = useState(false);
     const { restaurants, restaurantsSelected } = useSelector((state) => state.restaurants);
     const hasRestaurants = restaurants.length > 0;
@@ -24,7 +24,7 @@ const Home = () => {
         dots: false,
         infinite: true,
         autoplay: true,
-        speed: 500,
+        speed: 400,
         slidesToShow: 4,
         slidesToScroll: 4,
         adaptiveHeigth: true

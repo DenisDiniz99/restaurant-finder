@@ -15,8 +15,8 @@ export const LoadingSkeleton = styled.div`
     border-radius: 6px;
     margin-bottom: 10px;
     min-width: ${(props) => props.width };
-    heigth: ${(props) => props.heigth };
+    height: ${(props) => props.height };
     animation: ${keyFramaLoading} 500ms infinite alternate;
 `;
 
-export default ({width, heigth }) => <LoadingSkeleton width={width} heigth={heigth}/>;
+export default ({width, height }) => <LoadingSkeleton width={width} height={height}/>;

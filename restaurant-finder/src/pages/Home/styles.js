@@ -40,4 +40,5 @@ export const Carousel = styled(Slider)`
 
 export const Wrapper = styled.div`
     display: flex;
+    flex-direction: row;
 `;
