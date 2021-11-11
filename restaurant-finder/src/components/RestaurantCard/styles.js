@@ -22,10 +22,11 @@ export const RestaurantInfo = styled.div`
 
 export const RestaurantPhoto = styled.img`
   border-radius: 4px;
-  width: 90px;
-  max-height: 90px;
+  width: 100%;
+  max-width: 90px;
+  height: 90px;
   object-fit: cover;
-  display: ${(props) => (props.ImageLoaded ? 'block' : 'none')};
+  display: ${(props) => (props.imageLoaded ? 'block' : 'none')};
 `;
 
 export const Content = styled(Text)`
