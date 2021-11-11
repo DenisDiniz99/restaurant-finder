@@ -7,7 +7,7 @@ export default ()=> {
     const defaultOptions = {
         loop: true,
         autoplay: true,
-        animation,
+        animationData: animation,
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice',
         }

@@ -3,9 +3,7 @@ import { useSelector } from 'react-redux';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
-
 import { RestaurantCard, Modal, Map, ImageCard, Loader, Text, ImageSkeleton as Skeleton, } from '../../components';
-
 import { Container, Search, Logo, CarouselTitle, Carousel, Wrapper } from './styles';
 
 import logo from '../../assets/logo.svg';
@@ -79,7 +77,7 @@ const Home = () => {
                     <Logo src={logo} alt="Logo da empresa"/>
                     <TextField
                         outlined
-                        label="Pesquisar Restaurante"
+                        label="Buscar Restaurante"
                         trailingIcon={ <MaterialIcon role="button" icon="search"/> }
                     >
                         <Input type="text" value={value} onKeyPress={handleKeyPress} onChange={handleChange}/>
@@ -88,7 +86,8 @@ const Home = () => {
                 </Search>
                 {renderRestaurants()}
                 <Modal open={open} onClose={() => setOpen(false)}>
-                    {restaurantsSelected ? (
+                    {restaurantsSelected ? 
+                    (
                         <>
                             <Text size="large">{restaurantsSelected?.name}</Text>
                             <Text size="medium">{restaurantsSelected?.formatted_phone_number}</Text>
@@ -96,7 +95,8 @@ const Home = () => {
                             <Text size="medium">
                                 {restaurantsSelected?.opening_hours?.open_now
                                     ? 'Aberto agora :)'
-                                    : 'Fechado neste momento :('}
+                                    : 'Fechado neste momento :('
+                                }
                             </Text>
                         </>
                     ) : (
